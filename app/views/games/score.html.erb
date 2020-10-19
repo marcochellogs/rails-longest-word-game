@@ -1,0 +1,13 @@
+<h1>Result</h1>
+
+<div>
+  <p>Your current score is <%= @user_score%></p>
+<ul>
+  <% @beginning.each do |letter| %>
+  <li><%= letter %></li>
+  <%end%>
+</ul>
+<p>You answered <strong><%= @word%></strong> </p>
+<p> <%=  @answer_message%></p>
+<%= link_to "Play again", "/new" %>
+</div>

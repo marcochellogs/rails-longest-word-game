@@ -1,0 +1,18 @@
+<h1>Longest word game</h1>
+  <div><p>Your current score is <%= @user_score%></p></div>
+<ul>
+  <% @letters.each do |letter| %>
+  <li><%= letter %></li>
+  <%end%>
+</ul>
+
+<div>
+<p>Create a valid word with the above letters</p>
+
+<form action="/score" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :letters, @letters %>
+  <input type="text" name="word">
+  <input type="submit">
+</form>
+</div>

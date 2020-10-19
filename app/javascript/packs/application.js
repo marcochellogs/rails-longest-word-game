@@ -14,3 +14,23 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+
+ document.addEventListener('DOMContentLoaded', (event) => {
+  const listItems = document.querySelectorAll('li');
+
+  if (listItems) {
+    listItems.forEach((item) => {
+      item.addEventListener('mouseover', event => {
+        event.currentTarget.classList.toggle('big');
+        console.log(event.currentTarget)
+      })
+      item.addEventListener('mouseleave', event => {
+        event.currentTarget.classList.toggle('big');
+        console.log(event.currentTarget)
+      })
+    })
+
+  }
+
+  });
